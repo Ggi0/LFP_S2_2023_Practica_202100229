@@ -14,47 +14,51 @@ def leerArchivoEntrada(listaFrutas):
     #listaFrutas = []
     #SELECCIONAR EL Archivo.inv
     ruta = input('Escriba la ruta del archivo ".inv": ')
+    if ruta.endswith('.inv'):
+        #Abre le archivo y lo cierra posteriormente
+        #lee linea x linea
+        with open(ruta,'r') as archivo:
+            #archivo = open(ruta, 'r+') -> abre le archivo pero no lo cierra
+            lineas = archivo.readlines()
+            #imprime una lista y los valores son las lineas
+            #print(lineas)
 
-    #Abre le archivo y lo cierra posteriormente
-    #lee linea x linea
-    with open(ruta,'r') as archivo:
-        #archivo = open(ruta, 'r+') -> abre le archivo pero no lo cierra
-        lineas = archivo.readlines()
-        #imprime una lista y los valores son las lineas
-        #print(lineas)
+        #leyendo linea por linea y remplazando
+        for i in lineas:
+            #lee por linea y remplaza lo devido
+            i = i.replace('crear_producto ','').replace('\n','').split(';')
+            #i.split(';')
+            
+            contador = 1
+            tempNombre = None
+            tempCantidad = None
+            tempPrecio = None
+            tempUbi = None
+            for j in i:
+                if contador ==1:
+                    tempNombre = j
+                elif contador == 2:
+                    tempCantidad = j
+                elif contador == 3:
+                    tempPrecio = j
+                elif contador == 4:
+                    tempUbi = j
+                contador += 1
+            miFruta = Fruta(tempNombre, tempCantidad, tempPrecio, tempUbi)
+            listaFrutas.append(miFruta)
 
-    #leyendo linea por linea y remplazando
-    for i in lineas:
-        #lee por linea y remplaza lo devido
-        i = i.replace('crear_producto ','').replace('\n','').split(';')
-        #i.split(';')
-        
-        contador = 1
-        tempNombre = None
-        tempCantidad = None
-        tempPrecio = None
-        tempUbi = None
-        for j in i:
-            if contador ==1:
-                tempNombre = j
-            elif contador == 2:
-                tempCantidad = j
-            elif contador == 3:
-                tempPrecio = j
-            elif contador == 4:
-                tempUbi = j
-            contador += 1
-        miFruta = Fruta(tempNombre, tempCantidad, tempPrecio, tempUbi)
-        listaFrutas.append(miFruta)
+            #mostrar(listaFrutas)
+            #print(i)
+            #la final de cada linea ha un '\n' entoces corta pero el '\n' aun se ejecuta
+            #i.split('\n')
 
-        #mostrar(listaFrutas)
-        #print(i)
-        #la final de cada linea ha un '\n' entoces corta pero el '\n' aun se ejecuta
-        #i.split('\n')
-
-        #lee por linea sin los []
-        #print(i.replace('\n', ''))
-        
+            #lee por linea sin los []
+            #print(i.replace('\n', ''))
+        print('La carga inicial fue agregada exitosamente')
+        input('Presione ENTER para continuar ')
+    else:
+        print('Debe ingresar un archivo ".inv"')
+        input('Presione enter para continuar: ')
 
 #Se llama a la función para hacer pruebas en este archivo.py
 #leerArchivoEntrada()

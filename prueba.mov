@@ -4,5 +4,6 @@ crear_producto Platanos;75;1.75;BodegaC
 vender_producto Mangos;20;BodegaB
 agregar_stock Incaparinas;34;BodegaH
 vender_producto JudíasVerdes;300;BodegaW
+vender_producto Platanos;290;BodegaV
 agregar_stock Manzanas;50;BodegaA
 vender_producto Manzanas;346;BodegaA

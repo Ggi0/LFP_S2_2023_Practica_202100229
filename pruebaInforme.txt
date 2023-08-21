@@ -2,8 +2,8 @@ Informe de Inventario:
 
 Producto    Cantidad     PrecioUnitario       ValorTotal       Ubicación    
 ------------------------------------------------------------------------
-Manzanas      296             8.09             2394.64          BodegaA     
-Uvas          169             3.11              525.59          BodegaI     
+Manzanas       0              8.09               0.0            BodegaA     
+Uvas          149             3.11              463.39          BodegaB     
 Calabacines    189             1.78              336.42          BodegaY     
 Coliflor      237             7.10              1682.7          BodegaH     
 Duraznos      278             3.06              850.68          BodegaH     

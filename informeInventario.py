@@ -23,5 +23,7 @@ def escribirTXT(listaProductos):
             valorTotal = round((float(listaProductos[i].cantidad) * float(listaProductos[i].precio)),2)
             archivo.write("{:10} {:^10} {:^20} {:^16} {:^16}".format(listaProductos[i].nombre,listaProductos[i].cantidad,listaProductos[i].precio,valorTotal,listaProductos[i].ubi)+'\n')
 
+    print('El Informe de Inventario fue generado exitosamente')
+    input('Presione ENTER para continuar ')
 
 
