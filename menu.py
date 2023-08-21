@@ -22,6 +22,7 @@ def menu():
             print('\n---> 1. Cargar Inventario Inicial')
             #llamos a la funcion que lee el archivo.inv y almacena en la listaPrincipal
             leerArchivoEntrada(listaPrincipal)
+            print(len(listaPrincipal))
             print('La carga inicial fue agregada exitosamente')
             input('Presione ENTER para continuar ')
         elif op == '2':

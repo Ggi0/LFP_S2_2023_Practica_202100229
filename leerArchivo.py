@@ -47,7 +47,7 @@ def leerArchivoEntrada(listaFrutas):
         miFruta = Fruta(tempNombre, tempCantidad, tempPrecio, tempUbi)
         listaFrutas.append(miFruta)
 
-        mostrar(listaFrutas)
+        #mostrar(listaFrutas)
         #print(i)
         #la final de cada linea ha un '\n' entoces corta pero el '\n' aun se ejecuta
         #i.split('\n')
