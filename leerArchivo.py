@@ -10,10 +10,10 @@ def mostrar(lista):
         k+=1
 
 #Leer el archio.inv por linea y lo mete en una lista de objetos
-def leerArchivoEntrada():
-    listaFrutas = []
+def leerArchivoEntrada(listaFrutas):
+    #listaFrutas = []
     #SELECCIONAR EL Archivo.inv
-    ruta = input('Escriba la ruta del archivo a leer: ')
+    ruta = input('Escriba la ruta del archivo ".inv": ')
 
     #Abre le archivo y lo cierra posteriormente
     #lee linea x linea
@@ -56,7 +56,7 @@ def leerArchivoEntrada():
         #print(i.replace('\n', ''))
         
 
-
-leerArchivoEntrada()
+#Se llama a la función para hacer pruebas en este archivo.py
+#leerArchivoEntrada()
 
 #C:/Users/gio/Desktop/LAB_LFP_2s23/Practica1/prueba.inv 1:21:47

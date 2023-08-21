@@ -18,5 +18,5 @@ def generar_producto():
     
     return f"crear_producto {nombre};{cantidad};{precio_unitario:.2f};{ubicacion}"
 
-for i in range(50):
+for i in range(100):
     print(generar_producto())
