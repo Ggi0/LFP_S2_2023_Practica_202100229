@@ -5,7 +5,7 @@ from crearProducto import Fruta
 
 #ingresamos como parametro a escribirTXT() una lista con los objetos 'Fruta'
 def escribirTXT(listaProductos):
-    with open('pruebaInforme.txt','w') as archivo:
+    with open('resultado_202100229.txt','w') as archivo:
         archivo.write('Informe de Inventario:\n\n')
         archivo.write("{:10} {:^10} {:^20} {:^16} {:^16}".format('Producto','Cantidad','PrecioUnitario','ValorTotal','Ubicación') + '\n')
         archivo.write('-'*72 + '\n')
